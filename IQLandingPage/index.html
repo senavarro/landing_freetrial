@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="45 minutos de inglês ao vivo, de graça, toda terça às 19h. A academia de inglês mais imersiva do Brasil.">
+  <title>Aula Gratuita — Idiomas Quevedo</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23F5651D'/><text y='.9em' font-size='80' font-weight='900' font-family='sans-serif' fill='white' x='18'>Q</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- GOOGLE ANALYTICS — replace G-XXXXXXXXXX with your real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BH4GNMHBJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BH4GNMHBJ2');
+</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0F1547;
+      --orange: #F5651D;
+      --white: #FFFFFF;
+      --orange-glow: rgba(245,101,29,0.15);
+      --navy-soft: #1a2260;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--navy);
+      background: var(--navy);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ════════════════════════════════════
+       HERO SPLIT LAYOUT
+    ════════════════════════════════════ */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Ambient floating words */
+    .ambient {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      user-select: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .ambient span {
+      position: absolute;
+      font-weight: 800;
+      color: rgba(255,255,255,0.03);
+      letter-spacing: 0.12em;
+      font-size: 13px;
+    }
+
+    /* ── LEFT ── */
+    .left {
+      padding: 32px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .logo-mark {
+      width: 32px; height: 32px;
+      background: var(--orange);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: white; font-size: 16px;
+    }
+    .logo-name {
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--orange-glow);
+      border: 1px solid rgba(245,101,29,0.35);
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .headline {
+      font-size: clamp(36px, 4.5vw, 60px);
+      font-weight: 800;
+      color: white;
+      line-height: 0.93;
+      letter-spacing: -0.035em;
+      margin-bottom: 16px;
+    }
+    .headline em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .pitch {
+      font-size: 15px;
+      color: white;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      max-width: 380px;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+    .pitch strong {
+      color: white;
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    /* Countdown */
+    .countdown {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+    .cd-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      opacity: 0.6;
+    }
+    .cd-units { display: flex; align-items: center; gap: 5px; }
+    .cd-unit { text-align: center; min-width: 38px; }
+    .cd-num {
+      display: block;
+      font-size: 22px;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+    .cd-lbl {
+      display: block;
+      font-size: 8px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+      opacity: 0.5;
+    }
+    .cd-sep { font-size: 16px; font-weight: 800; color: white; opacity: 0.3; margin-bottom: 10px; }
+
+    /* Trust */
+    .trust { display: flex; flex-direction: column; gap: 10px; }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: white;
+      font-weight: 500;
+    }
+    .trust-pip {
+      width: 6px; height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── RIGHT ── */
+    .right {
+      background: var(--white);
+      padding: 32px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .form-meta {
+      font-size: 14px;
+      color: var(--orange);
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    /* Progress */
+    .progress {
+      height: 3px;
+      background: rgba(15,21,71,0.1);
+      border-radius: 3px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: var(--orange);
+      border-radius: 3px;
+      width: 0%;
+      transition: width 0.35s ease;
+    }
+
+    /* Fields */
+    .field { margin-bottom: 12px; }
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .field label .req { color: var(--orange); }
+
+    .field-error {
+      display: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: #d63031;
+      margin-top: 5px;
+      padding: 6px 10px;
+      background: rgba(214,48,49,0.08);
+      border-radius: 6px;
+    }
+    .field-error.show { display: block; }
+
+    .field input,
+    .field select {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      background: #F0F2FF;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 12px 14px;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.15s, background 0.15s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .field input::placeholder { color: rgba(15,21,71,0.4); }
+    .field input:focus,
+    .field select:focus {
+      border-color: var(--orange);
+      background: white;
+    }
+    .field input.err { border-color: #e53e3e; }
+    .field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%230F1547' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-color: #F0F2FF;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+    .field select:focus { background-color: white; }
+    .field select option { color: var(--navy); background: white; }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--orange);
+      color: white;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 8px;
+      letter-spacing: 0.01em;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+    .submit-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .form-guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .guarantee-item {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .guarantee-item::before { content: "✓"; color: var(--orange); font-weight: 800; }
+
+    /* ── SUCCESS STATE ── */
+    .success-box {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-box.show { display: block; }
+
+    .success-icon { font-size: 56px; margin-bottom: 16px; }
+    .success-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .success-text {
+      font-size: 15px;
+      color: var(--navy);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .success-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--orange);
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .success-cta:hover { transform: translateY(-2px); }
+
+    /* ════════════════════════════════════
+       POST-SUBMIT SECTIONS
+    ════════════════════════════════════ */
+    .post-content {
+      display: none;
+    }
+    .post-content.show {
+      display: block;
+    }
+
+    /* Section base */
+    .ps {
+      padding: 96px 60px;
+    }
+    .ps-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .ps-inner.reverse { direction: rtl; }
+    .ps-inner.reverse > * { direction: ltr; }
+
+    .ps-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .ps-tag.light {
+      background: var(--orange-glow);
+      border: 1px solid rgba(245,101,29,0.3);
+      color: var(--orange);
+    }
+    .ps-tag.dark {
+      background: rgba(245,101,29,0.2);
+      border: 1px solid rgba(245,101,29,0.4);
+      color: var(--orange);
+    }
+
+    .ps-headline {
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .ps-body {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .ps-features { display: flex; flex-direction: column; gap: 12px; }
+    .ps-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .ps-feature-pip {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* White section */
+    .ps-white { background: white; }
+    .ps-white .ps-headline { color: var(--navy); }
+    .ps-white .ps-body { color: var(--navy); }
+    .ps-white .ps-feature { color: var(--navy); }
+    .ps-white .ps-feature-pip { background: var(--orange-glow); color: var(--orange); }
+
+    /* Navy section */
+    .ps-navy { background: var(--navy); position: relative; overflow: hidden; }
+    .ps-navy .ps-headline { color: white; }
+    .ps-navy .ps-body { color: white; }
+    .ps-navy .ps-feature { color: white; }
+    .ps-navy .ps-feature-pip { background: rgba(245,101,29,0.25); color: var(--orange); }
+
+    /* Phone mockup */
+    .phone-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      width: 260px;
+      background: #0a0a0a;
+      border-radius: 44px;
+      padding: 14px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.1),
+        0 40px 80px rgba(0,0,0,0.5),
+        0 20px 40px rgba(245,101,29,0.15);
+      position: relative;
+    }
+
+    .phone::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 18px;
+      background: #0a0a0a;
+      border-radius: 0 0 12px 12px;
+      z-index: 2;
+    }
+
+    .phone img {
+      width: 100%;
+      border-radius: 32px;
+      display: block;
+    }
+
+    /* Screenshot (not phone) */
+    .screenshot-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .screenshot {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(15,21,71,0.08);
+    }
+
+    .screenshot img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ── BADGES SECTION ── */
+    .ps-badges {
+      background: var(--white);
+      padding: 96px 60px;
+    }
+    .ps-badges-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .badges-header { margin-bottom: 48px; }
+    .badges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .badge-card {
+      background: #F0F2FF;
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .badge-emoji-wrap {
+      width: 44px; height: 44px;
+      background: white;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .badge-info {}
+    .badge-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .badge-desc {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--navy);
+      opacity: 0.6;
+    }
+
+    /* ── FINAL CTA ── */
+    .ps-final {
+      background: var(--orange);
+      padding: 80px 60px;
+      text-align: center;
+    }
+    .ps-final-inner { max-width: 600px; margin: 0 auto; }
+    .ps-final h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 16px;
+    }
+    .ps-final p {
+      font-size: 17px;
+      color: white;
+      font-weight: 500;
+      margin-bottom: 32px;
+      opacity: 0.9;
+    }
+    .ps-final-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: var(--orange);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 16px 36px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .ps-final-btn:hover { transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 28px 60px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 8px; }
+    .footer-mark {
+      width: 26px; height: 26px;
+      background: var(--orange);
+      border-radius: 5px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: white; font-size: 12px;
+    }
+    .footer-name { color: white; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .footer-tag { font-size: 12px; color: white; font-weight: 500; }
+    .footer-handle { font-size: 13px; color: var(--orange); font-weight: 700; text-decoration: none; }
+
+    /* ════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .left { padding: 48px 28px 40px; }
+      .right { padding: 40px 28px 56px; }
+      .logo { margin-bottom: 32px; }
+      .trust { display: none; }
+      .ps { padding: 72px 28px; }
+      .ps-inner { grid-template-columns: 1fr; gap: 40px; }
+      .ps-inner.reverse { direction: ltr; }
+      .ps-badges { padding: 72px 28px; }
+      .ps-final { padding: 64px 28px; }
+      footer { padding: 24px 28px; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .headline { font-size: 40px; }
+      .countdown { flex-direction: column; gap: 8px; align-items: flex-start; }
+      .badges-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+<div class="hero">
+  <div class="ambient" aria-hidden="true">
+    <span style="top:5%;left:4%">SPEAK</span>
+    <span style="top:12%;right:6%">LISTEN</span>
+    <span style="top:24%;left:58%">FLUENT</span>
+    <span style="top:36%;left:3%">IMMERSION</span>
+    <span style="top:50%;right:5%">PRACTICE</span>
+    <span style="top:63%;left:28%">WORDS</span>
+    <span style="top:74%;left:6%">ENGLISH</span>
+    <span style="top:84%;right:9%">ACCENT</span>
+    <span style="top:92%;left:44%">CONFIDENCE</span>
+  </div>
+
+  <!-- LEFT PANEL -->
+  <div class="left">
+    <div class="logo">
+      <div class="logo-mark">Q</div>
+      <span class="logo-name">Idiomas Quevedo</span>
+    </div>
+
+    <div class="eyebrow">🇬🇧 Aula Experimental Gratuita</div>
+
+    <h1 class="headline">
+      45 minutos.<br>
+      <em>De graça.</em><br>
+      Toda terça.
+    </h1>
+
+    <p class="pitch">
+      Uma aula de inglês ao vivo, com professor de verdade.<br>
+      <strong>Sem compromisso. Sem cartão.</strong>
+    </p>
+
+    <div class="countdown">
+      <span class="cd-label">Próxima aula em</span>
+      <div class="cd-units">
+        <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">dias</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">horas</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">min</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">seg</span></div>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div class="trust-item"><div class="trust-pip"></div>Professores com vivência internacional</div>
+      <div class="trust-item"><div class="trust-pip"></div>SotaQ — IA de sotaque exclusiva</div>
+      <div class="trust-item"><div class="trust-pip"></div>Student Portal — painel de evolução completo</div>
+      <div class="trust-item"><div class="trust-pip"></div>Turmas de no máximo 5 pessoas</div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL: FORM -->
+  <div class="right">
+    <div id="form-wrap">
+      <div class="form-title">Garante sua vaga gratuita</div>
+      <div class="form-meta">Terça-feira · 19h (horário de Brasília) · 45 minutos · Ao vivo</div>
+
+      <div class="progress" aria-hidden="true">
+        <div class="progress-bar" id="pb"></div>
+      </div>
+
+      <!--
+      ══════════════════════════════════════════════════════
+      NETLIFY FORMS — EMAIL NOTIFICATIONS SETUP:
+      1. Deploy folder to Netlify (app.netlify.com → drag & drop)
+      2. Netlify Dashboard → Your Site → Forms → aula-gratuita
+      3. Form notifications → Add notification → Email notification
+      4. Add: info.idiomasquevedo@gmail.com  [repeat for sergi]
+      ══════════════════════════════════════════════════════
+      -->
+      <form id="main-form" name="aula-gratuita" method="POST" netlify data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="aula-gratuita">
+        <p style="display:none"><input name="bot-field"></p>
+
+        <div class="field">
+          <label for="nome">Nome completo <span class="req">*</span></label>
+          <input type="text" id="nome" name="nome" placeholder="Como você se chama?" required autocomplete="name">
+          <span class="field-error" id="err-nome">👆 Por favor, escreve o teu nome</span>
+        </div>
+
+        <div class="field">
+          <label for="whatsapp">WhatsApp com DDD <span class="req">*</span></label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="Ex: 11 99999-9999" required autocomplete="tel">
+          <span class="field-error" id="err-whatsapp">📱 Precisamos do teu WhatsApp pra enviar o link da aula</span>
+        </div>
+
+        <div class="field">
+          <label for="nivel">Seu nível de inglês hoje <span class="req">*</span></label>
+          <select id="nivel" name="nivel" required>
+            <option value="" disabled selected>Escolha uma opção</option>
+            <option value="zero">Nunca abri a boca em inglês</option>
+            <option value="basico">Entendo um pouco, mas na hora de falar... trava</option>
+            <option value="intermediario">Me viro, mas quero mais fluência</option>
+            <option value="avancado">Já falo bem, quero soar mais natural</option>
+          </select>
+          <span class="field-error" id="err-nivel">👆 Seleciona o teu nível de inglês</span>
+        </div>
+
+        <div class="field">
+          <label for="objetivo">Principal objetivo com o inglês <span class="req">*</span></label>
+          <select id="objetivo" name="objetivo" required>
+            <option value="" disabled selected>Escolha uma opção</option>
+            <option value="trabalho">Trabalho e reuniões internacionais</option>
+            <option value="viagem">Viagem e intercâmbio</option>
+            <option value="fluencia">Fluência geral e confiança</option>
+            <option value="outro">Outro</option>
+          </select>
+          <span class="field-error" id="err-objetivo">👆 Seleciona o teu principal objetivo</span>
+        </div>
+
+        <div class="field">
+          <label for="origem">Como ficou sabendo da aula <span class="req">*</span></label>
+          <select id="origem" name="origem" required>
+            <option value="" disabled selected>Escolha uma opção</option>
+            <option value="anuncio">Anúncio no Instagram</option>
+            <option value="reel">Post ou Reel no Instagram</option>
+            <option value="tiktok">TikTok</option>
+            <option value="amigo">Indicação de amigo</option>
+            <option value="seguia">Já sigo o @idiomasquevedo</option>
+            <option value="aluno">Já sou aluno da Quevedo</option>
+            <option value="outro">Outro</option>
+          </select>
+          <span class="field-error" id="err-origem">👆 Nos conta como chegaste aqui</span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">
+          Quero minha vaga gratuita →
+        </button>
+
+        <div class="form-guarantee">
+          <span class="guarantee-item">Sem cartão</span>
+          <span class="guarantee-item">Sem compromisso</span>
+          <span class="guarantee-item">Ao vivo com professor</span>
+        </div>
+      </form>
+
+      <!-- SUCCESS -->
+      <div class="success-box" id="success-box">
+        <div class="success-icon">🎉</div>
+        <div class="success-title">Inscrição confirmada!</div>
+        <p class="success-text">
+          Vamos te enviar o link da aula pelo WhatsApp antes de terça-feira às 19h (horário de Brasília).<br><br>
+          <strong>Prepara a voz — daqui a pouco você vai falar inglês de verdade.</strong>
+        </p>
+        <a href="#about" class="success-cta" id="discover-btn">
+          Descubra o que nossos alunos têm →
+        </a>
+      </div>
+    </div>
+  </div>
+</div><!-- end .hero -->
+
+
+<!-- ════════════════════════════════════
+     POST-SUBMIT CONTENT
+════════════════════════════════════ -->
+<div class="post-content" id="post-content">
+
+  <!-- 1. PORTAL / ZONAQ -->
+  <section class="ps ps-white" id="about">
+    <div class="ps-inner">
+      <div>
+        <div class="ps-tag light">Student Portal — Portal do Aluno</div>
+        <h2 class="ps-headline">Seu QG de inglês. Disponível 24h.</h2>
+        <p class="ps-body">O Student Portal é o painel exclusivo onde a sua evolução acontece — não só nas aulas, mas todos os dias.</p>
+        <div class="ps-features">
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Agende suas aulas com flexibilidade total — no horário que funciona pra você</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Jogo do dia disponível toda semana — 5 minutos que fazem diferença</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Acompanhe presença, semanas seguidas e progresso em tempo real</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Reflexão semanal em inglês que vai direto pro professor antes da próxima aula</span>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-wrap">
+        <div class="screenshot">
+          <img src="portal.png" alt="ZonaQ Portal do Aluno" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SOTAQ -->
+  <section class="ps ps-navy">
+    <div class="ps-inner reverse">
+      <div>
+        <div class="ps-tag dark">SotaQ — IA de Sotaque</div>
+        <h2 class="ps-headline">A IA que corrige seu sotaque. Toda hora. Todo dia.</h2>
+        <p class="ps-body">Tecnologia exclusiva da Quevedo. Você fala uma frase, o SotaQ analisa palavra por palavra e te diz exatamente o que melhorar — em UK ou US, você escolhe.</p>
+        <div class="ps-features">
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Análise palavra a palavra — verde, amarelo e vermelho te mostram onde focar</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Ritmo, fluência e compreensibilidade — tudo medido em segundos</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Seu maior desafio identificado automaticamente — nenhum erro passa despercebido</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Disponível 24h — treine nos dias sem aula e nunca pare de evoluir</span>
+          </div>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="sotaq.png" alt="SotaQ App" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. GAMES -->
+  <section class="ps ps-white">
+    <div class="ps-inner">
+      <div>
+        <div class="ps-tag light">Praticar — Jogos Diários</div>
+        <h2 class="ps-headline">Inglês que vicia. De propósito.</h2>
+        <p class="ps-body">Um novo jogo, frase e missão todo dia. Cinco minutos que constroem vocabulário, gramática e instinto sem parecer estudo.</p>
+        <div class="ps-features">
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Flash Cards — verbos irregulares EN ↔ PT</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Complete a Frase — escolha a opção correta</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Monte a Frase — toque nas palavras em ordem</span>
+          </div>
+          <div class="ps-feature">
+            <div class="ps-feature-pip">✓</div>
+            <span>Phrasal Verbs — um dos maiores desafios do inglês, finalmente dominado</span>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-wrap">
+        <div class="screenshot">
+          <img src="games.png" alt="Jogos diários na Quevedo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. BADGES -->
+  <section class="ps-badges">
+    <div class="ps-badges-inner">
+      <div class="badges-header">
+        <div class="ps-tag light" style="margin-bottom:16px;">Conquistas</div>
+        <h2 class="ps-headline" style="color:var(--navy);font-size:clamp(32px,4vw,50px);letter-spacing:-0.03em;margin-bottom:12px;">17 badges que refletem sua evolução real.</h2>
+        <p style="font-size:16px;color:var(--navy);font-weight:500;max-width:580px;">Da primeira aula até completar 12 meses, cada conquista é uma prova de que você não desistiu.</p>
+      </div>
+      <div class="badges-grid">
+        <div class="badge-card"><div class="badge-emoji-wrap">🎯</div><div class="badge-info"><div class="badge-name">Primeira Aula</div><div class="badge-desc">Bem-vindo à Student Portal!</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">⭐</div><div class="badge-info"><div class="badge-name">5 Aulas</div><div class="badge-desc">Assista 5 aulas no total</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🔥</div><div class="badge-info"><div class="badge-name">10 Aulas</div><div class="badge-desc">Assista 10 aulas no total</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">💪</div><div class="badge-info"><div class="badge-name">25 Aulas</div><div class="badge-desc">Assista 25 aulas no total</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🏆</div><div class="badge-info"><div class="badge-name">50 Aulas</div><div class="badge-desc">Assista 50 aulas no total</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">💎</div><div class="badge-info"><div class="badge-name">100 Aulas</div><div class="badge-desc">Assista 100 aulas no total</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🚀</div><div class="badge-info"><div class="badge-name">Decolagem</div><div class="badge-desc">Agende a 1ª aula em até 24h</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🤝</div><div class="badge-info"><div class="badge-name">Fiel</div><div class="badge-desc">Presença por 8 semanas seguidas</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">⚡</div><div class="badge-info"><div class="badge-name">Imparável</div><div class="badge-desc">Presença por 12 semanas seguidas</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">📅</div><div class="badge-info"><div class="badge-name">Pontualidade</div><div class="badge-desc">5 aulas sem cancelar nenhuma</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🌟</div><div class="badge-info"><div class="badge-name">Speaking Star</div><div class="badge-desc">Participe do Speaking Club 5 vezes</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🎤</div><div class="badge-info"><div class="badge-name">Confiante</div><div class="badge-desc">Participe do Speaking Club 10 vezes</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">📈</div><div class="badge-info"><div class="badge-name">Evoluindo</div><div class="badge-desc">Avance de nível com seu professor</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">👑</div><div class="badge-info"><div class="badge-name">Elite</div><div class="badge-desc">Complete os 12 meses do Elite Squad</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🎮</div><div class="badge-info"><div class="badge-name">Primeira Jogada</div><div class="badge-desc">Complete seu primeiro mini game</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">🔥</div><div class="badge-info"><div class="badge-name">7 Dias de Jogos</div><div class="badge-desc">Jogue por 7 dias seguidos</div></div></div>
+        <div class="badge-card"><div class="badge-emoji-wrap">⚡</div><div class="badge-info"><div class="badge-name">30 Dias de Jogos</div><div class="badge-desc">Jogue por 30 dias seguidos</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FINAL CTA -->
+  <section class="ps-final">
+    <div class="ps-final-inner">
+      <h2>Pronto para começar?</h2>
+      <p>A próxima aula gratuita é terça-feira às 19h. Sua vaga está esperando.</p>
+      <a href="#" class="ps-final-btn" id="back-to-form">Voltar ao topo e garantir vaga →</a>
+    </div>
+  </section>
+
+</div><!-- end .post-content -->
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="footer-mark">Q</div>
+      <span class="footer-name">Idiomas Quevedo</span>
+    </div>
+    <span class="footer-tag">A academia de inglês mais imersiva do Brasil 🇬🇧</span>
+    <a href="https://instagram.com/idiomasquevedo" class="footer-handle" target="_blank" rel="noopener">@idiomasquevedo</a>
+  </div>
+</footer>
+
+<script>
+  // ── COUNTDOWN ──
+  function getNextTuesdayBRT() {
+    const brtOff = -3 * 60;
+    const utc = Date.now() + new Date().getTimezoneOffset() * 60000;
+    const brt = new Date(utc + brtOff * 60000);
+    const day = brt.getDay();
+    let d = (2 - day + 7) % 7;
+    if (day === 2 && brt.getHours() < 19) d = 0;
+    else if (d === 0) d = 7;
+    const t = new Date(brt);
+    t.setDate(brt.getDate() + d);
+    t.setHours(19, 0, 0, 0);
+    return new Date(t.getTime() - brtOff * 60000);
+  }
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    const diff = getNextTuesdayBRT() - Date.now();
+    if (diff <= 0) return;
+    document.getElementById('cd-d').textContent = pad(Math.floor(diff / 86400000));
+    document.getElementById('cd-h').textContent = pad(Math.floor(diff % 86400000 / 3600000));
+    document.getElementById('cd-m').textContent = pad(Math.floor(diff % 3600000 / 60000));
+    document.getElementById('cd-s').textContent = pad(Math.floor(diff % 60000 / 1000));
+  }
+  tick(); setInterval(tick, 1000);
+
+  // ── PROGRESS BAR ──
+  const FIELDS = ['nome', 'whatsapp', 'nivel', 'objetivo', 'origem'];
+  const done = new Set();
+  const pb = document.getElementById('pb');
+
+  FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    const errEl = document.getElementById('err-' + id);
+    ['change','blur'].forEach(ev => {
+      el.addEventListener(ev, () => {
+        if (el.value.trim()) {
+          done.add(id);
+          el.classList.remove('err');
+          if (errEl) errEl.classList.remove('show');
+        } else {
+          done.delete(id);
+        }
+        pb.style.width = (done.size / FIELDS.length * 100) + '%';
+      });
+    });
+  });
+
+  // ── FORM SUBMIT ──
+  let started = false;
+  const form = document.getElementById('main-form');
+  const btn = document.getElementById('submit-btn');
+  const formWrap = document.getElementById('form-wrap');
+  const successBox = document.getElementById('success-box');
+  const postContent = document.getElementById('post-content');
+
+  form.addEventListener('focusin', () => {
+    if (started) return; started = true;
+    if (typeof gtag !== 'undefined') gtag('event','form_start',{form_name:'aula_gratuita'});
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    // Validate and show friendly errors per field
+    let ok = true;
+    let firstErr = null;
+    FIELDS.forEach(id => {
+      const el = document.getElementById(id);
+      const errEl = document.getElementById('err-' + id);
+      if (!el.value.trim()) {
+        el.classList.add('err');
+        if (errEl) errEl.classList.add('show');
+        ok = false;
+        if (!firstErr) firstErr = el;
+      } else {
+        el.classList.remove('err');
+        if (errEl) errEl.classList.remove('show');
+      }
+    });
+
+    if (!ok) {
+      firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      firstErr.focus();
+      return;
+    }
+
+    btn.textContent = 'Inscrevendo...';
+    btn.disabled = true;
+
+    if (typeof gtag !== 'undefined') {
+      gtag('event','form_submit',{
+        form_name: 'aula_gratuita',
+        nivel: document.getElementById('nivel').value,
+        objetivo: document.getElementById('objetivo').value,
+        origem: document.getElementById('origem').value
+      });
+      gtag('event','conversion',{send_to:'G-XXXXXXXXXX'});
+    }
+
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      // Netlify returns 200 or 303 redirect on success
+    } catch(_) {}
+
+    // Show success regardless (Netlify often returns redirect)
+    form.style.display = 'none';
+    successBox.classList.add('show');
+  });
+
+  // Reveal post-content on "Descubra" click
+  document.getElementById('discover-btn').addEventListener('click', e => {
+    e.preventDefault();
+    postContent.classList.add('show');
+    setTimeout(() => {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  });
+
+  // Back to top
+  document.getElementById('back-to-form').addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
